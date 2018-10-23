@@ -46,7 +46,11 @@ public class ShowBalance extends HttpServlet {
             address="/WEB-INF/bank-account/NormalBalance.jsp";
             request.setAttribute("customer", customer);
         }
+        //foward  =>就像客戶找你,你交給你同事處理(對客戶來說只有打一通電話)
         request.getRequestDispatcher(address).forward(request, response);
+        //sendRedirect =>就像客戶打給你,你叫客戶去找其他的廠商(所以客戶還要再打一通電話)
+        
+        //response.sendRedirect(address);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

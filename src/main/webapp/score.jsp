@@ -1,8 +1,7 @@
 <%-- 
-    Document   : UnknownStudent
-    Created on : Sep 24, 2018, 7:35:46 AM
-    Author     : lendle
-    HighScore->80up 
+    Document   : score
+    Created on : 2018/10/22, 下午 04:12:48
+    Author     : mac
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -60,7 +59,7 @@
                 border-radius: 100%;
                 border: 2px solid #aaa;
                 background-size: cover;
-                background-image: url(normalscore.png)
+                background-image: url(prof.png)
             }
 
             .form-box input{
@@ -82,7 +81,20 @@
             .form-box input[type="text"]{
                 border-radius: 5px 5px 0 0;
                 text-transform: lowercase;
-            }              
+            }
+
+            .form-box input[type="password"]{
+                border-radius: 0 0 5px 5px;
+                border-top: 0;
+            }
+
+            .form-box button.login{
+                margin-top:15px;
+                padding: 10px 20px;
+            }
+
+
+    
         </style>
     </head>
     <body>        
@@ -91,31 +103,9 @@
                 <div class="avatar"></div>
                 <div class="form-box">
                     <form action="score" method="post">
-                        <input name="id"readonly class="form-control-plaintext" value="<jsp:getProperty name="student" property ="name"/>">
-                        
+                        <input name="id" type="text" placeholder="input Id">
+                        <button class="btn btn-info btn-block login" type="submit">Check score!</button>
                     </form>
-                    <br>
-                    <a href="#" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#largeModal">You are almost there!</a>
-                    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title" id="myModalLabel">Hi . <jsp:getProperty name="student" property ="name"/></h4>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                              <div class="modal-body" >
-                                  <img src="normalscore.png"/> 
-                              <h3>You are almost there!</h3>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              
-                            </div>
-                          </div>
-                        </div>
-                      </div>  
                 </div>
             </div>
         
