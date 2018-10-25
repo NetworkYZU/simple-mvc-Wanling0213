@@ -101,13 +101,15 @@
                           <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title" id="myModalLabel">Hi . <jsp:getProperty name="student" property ="name"/></h4>
+                              
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
                               <div class="modal-body" >
-                                  <img src="highscore.png"/> 
-                              <h3>You did a good job!</h3>
+                                <img src="highscore.png"/> 
+                                <h1>Your score is <jsp:getProperty name="student" property="score"/>!</h1>
+                                <h3>You did a good job!</h3>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

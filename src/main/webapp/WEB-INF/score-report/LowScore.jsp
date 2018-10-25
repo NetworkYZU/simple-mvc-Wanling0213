@@ -107,6 +107,7 @@
                             </div>
                               <div class="modal-body" >
                                   <img src="lowscore.png"/> 
+                              <h1>Your score is <jsp:getProperty name="student" property="score"/>!</h1>    
                               <h3>Bad score... Cheer up!</h3>
                             </div>
                             <div class="modal-footer">
